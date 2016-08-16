@@ -38,7 +38,7 @@ Element providing means to open and close overlay modal with methods to capture 
               <button on-click="modalActionButtonClicked" id="{{btnModalNegative}}" class="btn u-mr-">{{btnModalNegative}}</button>
             </template>
             <template class="modal-toggle" is="dom-if" if="{{btnModalPositive}}">
-              <button on-click="modalActionButtonClicked" id="{{btnModalPositive}}" class="btn btn--primary">{{btnModalPositive}}</button>
+              <button on-click="modalActionButtonClicked" id="{{btnModalPositive}}" class="btn btn--primary" disabled$={{btnModalPositiveDisabled}}>{{btnModalPositive}}</button>
             </template>
         </div>
       </section>
@@ -114,6 +114,17 @@ Element providing means to open and close overlay modal with methods to capture 
       btnModalNegativeClickedEventName: {
         type: String,
         value: "btnModalNegativeClicked"
+      },
+
+      /**
+       * Flag to indicate if the positive button should be disabled within the modal.
+       *
+       * @type {String}
+       */
+      btnModalPositiveDisabled: {
+        type: Boolean,
+        value: false,
+        reflectToAttribute: true
       }
 
     },

@@ -1,3 +1,7 @@
+v1.2.7
+==================
+* Added property for disabling positive modal button
+
 v1.2.6
 ==================
 * Enabled btn--disabled
