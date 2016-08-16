@@ -31,6 +31,7 @@ Predix branding rules go in px-modal-predix.scss, not in this file.
 
 // Objects
 $inuit-enable-btn--primary      : true;
+$inuit-enable-btn--disabled     : true;
 
 @import "px-buttons-design/_objects.buttons.scss";
 

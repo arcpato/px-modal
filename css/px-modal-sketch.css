@@ -638,6 +638,21 @@ button.btn {
     border-color: transparent;
     background-color: #2b5ea2; }
 
+/**
+   * Change button colors for disabled buttons
+   */
+.btn--disabled, .btn--disabled:link, .btn--disabled:visited, .btn--disabled:hover, .btn--disabled:active,
+.btn[disabled],
+.btn[disabled]:link,
+.btn[disabled]:visited,
+.btn[disabled]:hover,
+.btn[disabled]:active {
+  border-color: #d1d0d8;
+  box-shadow: none;
+  cursor: not-allowed;
+  background-color: white;
+  color: #d1d0d8; }
+
 :host {
   display: inline-block; }
 
