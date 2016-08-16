@@ -1,3 +1,7 @@
+v1.2.6
+==================
+* Enabled btn--disabled
+
 v1.2.5
 ==================
 * updated mega demo styles and bower px-demo-snippet to ^
