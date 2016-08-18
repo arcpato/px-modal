@@ -1,6 +1,6 @@
 {
   "name": "px-modal",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "main": [
     "px-modal.html"
   ],
@@ -38,11 +38,11 @@
     "px-buttons-design": "^0.4.26"
   },
   "homepage": "https://github.com/PredixDev/px-modal",
-  "_release": "1.2.7",
+  "_release": "1.2.8",
   "_resolution": {
     "type": "version",
-    "tag": "v1.2.7",
-    "commit": "721d1666ab6bf2ed154fed44405dc27ee9d97ef4"
+    "tag": "v1.2.8",
+    "commit": "852b9047ada68807dc5454a67237e9ffb367e2ea"
   },
   "_source": "https://github.com/PredixDev/px-modal.git",
   "_target": "^1.1.1",

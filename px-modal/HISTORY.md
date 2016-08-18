@@ -1,3 +1,7 @@
+v1.2.8
+==================
+* fixed demo bugs
+
 v1.2.7
 ==================
 * Added property for disabling positive modal button
