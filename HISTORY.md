@@ -1,3 +1,7 @@
+v1.2.9
+==================
+* updated 'open modal' button styles
+
 v1.2.8
 ==================
 * fixed demo bugs

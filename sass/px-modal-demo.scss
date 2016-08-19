@@ -48,6 +48,9 @@ $inuit-enable-inline-fields : true;
 $inuit-enable-input--regular : true;
 @import "px-forms-design/_base.forms.scss";
 
+$inuit-enable-btn--tertiary : true;
+@import "px-buttons-design/_objects.buttons.scss";
+
 $inuit-enable-list-inline--delimited : true;
 @import "px-list-inline-design/_objects.list-inline.scss";
 
