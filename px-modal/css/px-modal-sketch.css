@@ -660,21 +660,41 @@ button.btn {
   position: fixed;
   visibility: hidden;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
-  z-index: 999; }
+  z-index: 999;
+  @apply (--px-modal); }
 
 .modal__content {
-  max-width: 27.3333333333rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: calc(100% - 2rem);
+  max-width: calc(100% - 2rem);
+  overflow: auto;
   border-radius: 3px;
   white-space: normal;
-  margin-top: 12rem; }
-  @media screen and (min-width: 45em) {
+  word-wrap: break-word;
+  word-break: break-word;
+  @apply (--px-modal-content); }
+  @media screen and (max-width: 44.9375em) {
     .modal__content {
-      width: 27.3333333333rem; } }
+      width: 100%; } }
+
+.modal__title {
+  @apply (--px-modal-title); }
 
 .modal__buttons {
   margin: 1.3333333333rem -1.3333333333rem 0;
   padding: 1.3333333333rem 1.3333333333rem 0; }
+
+.modal__buttons button.btn {
+  @apply (--px-modal-buttons); }
+
+.modal__buttons button.btn--primary {
+  @apply (--px-modal-positive-button); }
 
 /**
  * Margin and padding helper classes. Use these to tweak layout on a micro

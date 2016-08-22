@@ -13,12 +13,25 @@ Element providing means to open and close overlay modal with methods to capture 
 
 ##### Usage
 
-    <px-modal>
-      <button class=btn>Button Text</button>
+    <px-modal modal-heading="Sign in required" btn-modal-positive="Sign In" btn-modal-negative="Cancel">
+      <button class="btn btn--primary modal-trigger">Launch Modal</button>
+      Lorem ipsum dolor sit amet.
     </px-modal>
 
+
+### Styling
+The following custom properties are available for styling:
+
+Custom property | Description | Default
+------------ | ------------- | ------------
+`--px-modal`   | Style mixin to be applied to the modal overlay (background layer) | {}
+`--px-modal-content`   | Style mixin to be applied to the modal content box | {}
+`--px-modal-title`   | Style mixin to be applied to the title of the modal content box | {}
+`--px-modal-buttons`   | Style mixin to be applied to all of the buttons at the bottom of the overlay | {}
+`--px-modal-positive-button`   | Style mixin to be applied specifically to the positive action button of the overlay | {}
+
 @element px-modal
-@blurb Px Modal open, closing
+@blurb Element providing means to open and close overlay modal with methods to capture action when modal is submitted.
 @homepage index.html
 @demo demo.html
 -->
@@ -30,7 +43,7 @@ Element providing means to open and close overlay modal with methods to capture 
     </div>
     <div class="modal flex flex--top flex--center full-height u-1/1" id="{{modalId}}" role="dialog" aria-labelledby$="{{modalIdTitle(modalId)}}">
       <section class="modal__content u-p+" role=region>
-        <h3 id="{{modalIdTitle(modalId)}}" class="u-mt0 epsilon weight--normal">{{modalHeading}}</h3>
+        <h3 id="{{modalIdTitle(modalId)}}" class="modal__title u-mt0 epsilon weight--normal">{{modalHeading}}</h3>
         <content></content>
         <div class="modal__buttons flex flex--right">
           <div class=flex>
@@ -115,16 +128,25 @@ Element providing means to open and close overlay modal with methods to capture 
         type: String,
         value: "btnModalNegativeClicked"
       },
-
       /**
        * Flag to indicate if the positive button should be disabled within the modal.
        *
-       * @type {String}
+       * @type Boolean
        */
       btnModalPositiveDisabled: {
         type: Boolean,
         value: false,
         reflectToAttribute: true
+      },
+      /**
+       * Flag to indicate if scrolling of the main application should be disabled while the modal is open.
+       *
+       * @type Boolean
+       * @default true
+       */
+      scrollingDisabled: {
+        type: Boolean,
+        value: true
       }
 
     },
@@ -164,6 +186,10 @@ Element providing means to open and close overlay modal with methods to capture 
     modalButtonClicked: function(evt){
       var modalEle = this.$$("#" + this.modalId);
       modalEle.style.visibility = (modalEle.style.visibility === "visible") ? "hidden" : "visible";
+      if(this.scrollingDisabled) {
+        document.body.style.overflow = (document.body.style.overflow === "hidden") ? "auto" : "hidden";
+        document.documentElement.style.overflow = (document.documentElement.style.overflow === "hidden") ? "auto" : "hidden";
+      }
     }
   });
 </script>

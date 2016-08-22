@@ -1,3 +1,9 @@
+v1.2.10
+==================
+* changed responsive behavior
+* added property for background scrolling disable
+* added style mixins per issue 7
+
 v1.2.9
 ==================
 * updated 'open modal' button styles
