@@ -16,6 +16,14 @@
   <link rel="import" href="../px-polymer-font-awesome/polymer-font-awesome.html" />
   <!-- Requires Webcomponents.js polyfill is provided by the page for browsers that don't support html imports -->
 
+  <style is="custom-style">
+    :root {
+      --px-modal-title:{
+        color: red;
+      };
+    }
+  </style>
+
   </head>
 
 <body>
@@ -64,6 +72,16 @@
                 <div class="u-mb-">Btn Modal Positive: <input class="text-input" type="text" placeholder="{{item.btnModalPositive}}" value="{{item.btnModalPositive::input}}" /></div>
                 <div class="u-mb-">Btn Modal Negative: <input class="text-input" type="text" placeholder="{{item.btnModalNegative}}" value="{{item.btnModalNegative::input}}" /></div>
                 <div class="u-mb-">Modal Heading: <input class="text-input" type="text" placeholder="{{item.modalHeading}}" value="{{item.modalHeading::input}}" /></div>
+                <div class="flex u-mb-">
+                  <input id="btnModalPositiveDisabled{{indexPlusOne(index)}}" class="toggle__input toggle__input--small" type="checkbox" checked="{{item.btnModalPositiveDisabled::change}}">
+                  <label for$="btnModalPositiveDisabled{{indexPlusOne(index)}}" class="toggle__label toggle__label--small"></label>
+                  <div class="u-ml-">Positive Btn Disabled</div>
+                </div>
+                <div class="flex u-mb-">
+                  <input id="scrollingDisabled{{indexPlusOne(index)}}" class="toggle__input toggle__input--small" type="checkbox" checked="{{item.scrollingDisabled::change}}">
+                  <label for$="scrollingDisabled{{indexPlusOne(index)}}" class="toggle__label toggle__label--small"></label>
+                  <div class="u-ml-">Scrolling Disabled</div>
+                </div>
               </div>
 
               <div class="demoContainer u-mt+">
@@ -81,8 +99,10 @@
 
                       <px-modal
                         btn-modal-positive="[[item.btnModalPositive]]"
+                        btn-modal-positive-disabled="[[item.btnModalPositiveDisabled]]"
                         btn-modal-negative="[[item.btnModalNegative]]"
                         modal-heading="[[item.modalHeading]]"
+                        scrolling-disabled="[[item.scrollingDisabled]]"
                         id="modal{{index}}">
 
                         <template is="dom-if" if="{{_isFirstTab(index)}}">
@@ -150,26 +170,34 @@ window.addEventListener('WebComponentsReady', function() {
       optionsArray = [
         {
           btnModalPositive: "Continue",
+          btnModalPositiveDisabled: true,
           btnModalNegative: "Back",
           modalHeading: "Sign-in required",
+          scrollingDisabled: true,
           lightDomContent: "<button class='btn btn--primary modal-trigger'>Open Modal</button><p><b>Please sign-in to access this part of the application.</b></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt inculpa qui officia deserunt mollit anim id est laborum.</p>"
         },
         {
           btnModalPositive: "Continue",
+          btnModalPositiveDisabled: false,
           btnModalNegative: "Back",
           modalHeading: "Sign-in required",
+          scrollingDisabled: false,
           lightDomContent: "<a href='javascript:void(0)'' class='modal-trigger'>Open Modal</a><p><b>Please sign-in to access this part of the application.</b></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt inculpa qui officia deserunt mollit anim id est laborum.</p>"
         },
         {
           btnModalPositive: "Continue",
+          btnModalPositiveDisabled: false,
           btnModalNegative: "Back",
           modalHeading: "Sign-in required",
+          scrollingDisabled: true,
           lightDomContent: "<input class='text-input' type='text' placeholder='Take focus off me' id='thirdInput'><p><b>Please sign-in to access this part of the application.</b></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt inculpa qui officia deserunt mollit anim id est laborum.</p>"
         },
         {
           btnModalPositive: "Continue",
+          btnModalPositiveDisabled: false,
           btnModalNegative: "Back",
           modalHeading: "Sign-in required",
+          scrollingDisabled: false,
           lightDomContent: "<a href='javascript:void(0)' class='gotoGE'>Click me to get a modal, and continue to GE.com</a><p><b>Please sign-in to access this part of the application.</b></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt inculpa qui officia deserunt mollit anim id est laborum.</p>"
         }
       ],
