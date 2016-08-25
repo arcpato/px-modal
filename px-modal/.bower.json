@@ -1,6 +1,6 @@
 {
   "name": "px-modal",
-  "version": "1.2.10",
+  "version": "1.2.11",
   "main": [
     "px-modal.html"
   ],
@@ -28,8 +28,8 @@
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#~1.2.3",
     "px-polymer-font-awesome": "^0.1.8",
     "px-tabs": "~0.4.0",
-    "px-api-viewer": "~0.0.3",
-    "px-demo-snippet": "^0.1.0",
+    "px-api-viewer": "~0.0.5",
+    "px-demo-snippet": "^0.4.0",
     "px-toggle-design": "^0.2.12",
     "px-headings-design": "^0.2.14",
     "px-actionable-text-icons-design": "^0.0.3",
@@ -38,11 +38,11 @@
     "px-buttons-design": "^0.4.26"
   },
   "homepage": "https://github.com/PredixDev/px-modal",
-  "_release": "1.2.10",
+  "_release": "1.2.11",
   "_resolution": {
     "type": "version",
-    "tag": "v1.2.10",
-    "commit": "b220a96180a16273f71092985eeb5ad525b5163a"
+    "tag": "v1.2.11",
+    "commit": "b09f5c27c4403a1be33883ec5611f4aea83d6abf"
   },
   "_source": "https://github.com/PredixDev/px-modal.git",
   "_target": "^1.1.1",
