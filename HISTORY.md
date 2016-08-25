@@ -1,3 +1,7 @@
+v1.2.11
+==================
+* added codepen
+
 v1.2.10
 ==================
 * changed responsive behavior
