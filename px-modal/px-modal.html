@@ -35,9 +35,12 @@ Custom property | Description | Default
 @homepage index.html
 @demo demo.html
 -->
+<link rel="import" href="css/px-modal-styles.html"/>
+
 <dom-module id="px-modal">
-  <link rel="import" type="css" href="css/px-modal.css"/>
   <template>
+    <style include="px-modal-styles"></style>
+    <style include="px-theme-styles"></style>
     <div on-tap="modalButtonClicked">
       <content select=".modal-trigger"></content>
     </div>
