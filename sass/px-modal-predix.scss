@@ -25,13 +25,13 @@ common/abstract rules go in px-modal-sketch.scss, not in this file.
 @import 'px-modal-sketch.scss';
 
 .modal {
-  background-color: rgba($black, .7);
+  background-color: rgba(var(--px-modal-overlay-color, $black), .7);
 }
 
 .modal__content {
-  background-color: $white;
+  background-color: var(--px-modal-background-color, $white);
 }
 
 .modal__buttons {
-  border-top: 1px solid $gray4;
+  border-top: 1px solid var(--px-modal-border-color, $gray4);
 }
