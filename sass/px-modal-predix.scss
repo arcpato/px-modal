@@ -25,7 +25,7 @@ common/abstract rules go in px-modal-sketch.scss, not in this file.
 @import 'px-modal-sketch.scss';
 
 .modal {
-  background-color: rgba(var(--px-modal-overlay-color, $black), .7);
+  background-color: var(--px-modal-overlay-color, rgba($black, .7));
 }
 
 .modal__content {
