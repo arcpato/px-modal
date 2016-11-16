@@ -1,3 +1,8 @@
+
+v1.3.6
+==================
+* changing Gruntfile.js to gulpfile.js
+
 v1.3.5
 ==================
 * fixed style variable for rgba
